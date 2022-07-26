@@ -3,7 +3,7 @@ export const Menulist=[
         
         "title": "Beverages",
         "img": "https://images.unsplash.com/photo-1504630083234-14187a9df0f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGNvZmZlZXxlbnwwfDB8MHx8&auto=format&fit=crop&w=600&q=60",
-        "path": "SubMenu",
+        "path": "/SubMenu",
         
     },
     {

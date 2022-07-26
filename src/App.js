@@ -16,9 +16,9 @@ function App() {
           <Route path="/" element={<Main />} />
           <Route path="/About" element={<About />} />
           {/* <Route path="/project/:id" element={<ProjectDisplay />} /> */}
-          <Route path="/Menu/" element={<Menu />}>
-          <Route path="SubMenu" element={<SubMenu/>} />
-          </Route>
+          <Route path="/Menu/" element={<Menu />}/>
+          <Route path="/SubMenu" element={<SubMenu/>} />
+          {/* </Route> */}
           <Route path="/Faq" element={<Faq />} />
           <Route path="/Contact" element={<Contact />} />
         </Routes>
