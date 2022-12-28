@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ItemBox from "./ItemBox";
 export default function SubMenuCard(props) {
   return (
     <>
@@ -21,6 +22,7 @@ export default function SubMenuCard(props) {
           {props.desc}
         </div>
       </Link>
+      <ItemBox/>
     </>
   );
 }
