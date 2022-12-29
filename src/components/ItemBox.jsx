@@ -12,6 +12,9 @@ export default function ItemBox(props) {
               <div className="text-xl tracking-wide text-grey font-Dosis mx-3 font-semibold opacity-75 text-center">Rs. 50 /-</div>
               <div className="text-lg text-grey font-Dosis mt-5 mx-3 font-light opacity-75">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit, nulla ullam officiis in repudiandae autem beatae omnis culpa quos.</div>
             </div>
+            <div className="absolute top-0 right-0 h-8 w-8 cursor-pointer grid place-items-center">
+            <i className="fa-solid fa-xmark text-grey text-2xl grid place-items-center transition-all opacity-75 hover:opacity-100"></i>
+            </div>
       </div>
     </>
   )
