@@ -11,8 +11,8 @@ export default function MenuHead(props) {
     }
   return (
     
-    <div className="flex flex-col items-center justify-center h-[30vh] mb-7 w-full bg-cover text-white py-28" style={bg}>
-        <div className="text-[55px] lg:text-[80px] relative -mt-7 font-black text-yellow font-Null opacity-80 tracking-normal first-letter:mr-1" style={shadow}>{props.title}
+    <div className="flex flex-col items-center justify-center h-[30vh] lg:mb-7 w-full bg-cover text-white lg:py-28 overflow-visible" style={bg}>
+        <div className="text-[55px] lg:text-[80px] relative lg:-mt-7 font-black text-yellow font-Null opacity-80 tracking-normal first-letter:mr-1 overflow-visible" style={shadow}>{props.title}
         </div>
     </div>
   )

@@ -1,11 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { Link } from "react-router-dom";
 export default function MenuCard(props) {
+  useEffect(() => {
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+  }, []);
   return (
     <>
       <Link
         to={props.path}
-        className="flex flex-col items-center justify-center lg:my-10 mx-3 my-3 h-[200px] w-[200px]"
+        className="flex flex-col items-center justify-center lg:my-10 mx-3 my-3 h-[220px] w-[200px]"
+        onClick={() => {
+          window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        }}
       >
         <div className="grid place-items-center overflow-hidden w-[200px] h-[150px] shadow-[0_0_4px_1px_#e3e3e3]">
           <img

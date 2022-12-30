@@ -9,9 +9,10 @@ export default function Navbar() {
 
   const translate = {
     transform: expandNavbar ? "translateX(0%)" : "translateX(100%)",
+    display: expandNavbar ? "flex" : "none",
   };
   return (
-    <div className="bg-darkGreen w-full">
+    <div className="bg-darkGreen w-full z-50">
       <div className="flex flex-row items-center justify-between">
         <img src={logo} alt="MaggiHub" className="h-[60px] w-[60px]" />
         <div className="hidden lg:flex flex-row items-center justify-center">

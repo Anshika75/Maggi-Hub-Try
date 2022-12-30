@@ -20,19 +20,19 @@ export default function SubMenuCard(props) {
       {
         isOpen ? (
           <div className="absolute grid place-items-center h-full w-full z-20">
-          <div className="relative h-[250px] w-[500px] bg-[#FFFFFF] shadow-[0_0_4px_1px_#e3e3e37c] flex flex-row justify-center items-center ">
-            <div className="w-[40%] h-full grid place-items-center overflow-hidden">
-              <img className="w-full h-full hover:scale-125 transition-all hover:rotate-6" src={props.img} alt="" />
+            <div className="relative h-[450px] lg:h-[250px] w-[250px] lg:w-[500px] bg-[#FFFFFF] shadow-[0_0_4px_1px_#e3e3e37c] flex flex-col lg:flex-row justify-center items-center ">
+              <div className="w-full lg:w-[40%] h-[250px] lg:h-full grid place-items-center overflow-hidden">
+                <img className="w-full h-full hover:scale-125 transition-all hover:rotate-6" src={props.img} alt="" />
+              </div>
+              <div className="w-full lg:w-[60%] h-full flex flex-col justify-start items-start">
+                <div className="text-2xl tracking-wide text-orange font-Dosis mt-5 mx-3 font-semibold opacity-95 text-center">{props.title}</div>
+                <div className="text-xl tracking-wide text-grey font-Dosis mx-3 font-semibold opacity-75 text-center">{props.cost}</div>
+                <div className="text-lg text-grey font-Dosis mt-3 mx-3 font-normal">{props.desc}</div>
+              </div>
+              <div onClick={() => setIsOpen(false)} className="absolute top-0 right-0 h-8 w-8 cursor-pointer grid place-items-center">
+                <i className="fa-solid fa-xmark text-grey text-2xl grid place-items-center transition-all opacity-75 hover:opacity-100"></i>
+              </div>
             </div>
-            <div className="w-[60%] h-full flex flex-col justify-start items-start">
-              <div className="text-2xl tracking-wide text-orange font-Dosis mt-5 mx-3 font-semibold opacity-95 text-center">{props.title}</div>
-              <div className="text-xl tracking-wide text-grey font-Dosis mx-3 font-semibold opacity-75 text-center">{props.cost}</div>
-              <div className="text-lg text-grey font-Dosis mt-3 mx-3 font-normal">{props.desc}</div>
-            </div>
-            <div onClick={() => setIsOpen(false)} className="absolute top-0 right-0 h-8 w-8 cursor-pointer grid place-items-center">
-              <i className="fa-solid fa-xmark text-grey text-2xl grid place-items-center transition-all opacity-75 hover:opacity-100"></i>
-            </div>
-          </div>
           </div>
         ) : null
       }

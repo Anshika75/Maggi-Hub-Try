@@ -1,8 +1,12 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
+import React, { useEffect } from 'react'
 import pizza from '../assets/Pizza.png'
 import Button from '../components/Button'
 
 export default function Visit() {
+    useEffect(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, []);
     const bg = {
         backgroundImage: "linear-gradient(to right bottom, rgba(0,0,0, 0.5), rgba(0,0,0, 0.5)), url('https://images.unsplash.com/photo-1565060050533-478757130681?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODd8fGNoaWNrZW4lMjBmb29kfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=600&q=60')",
     }
@@ -13,10 +17,10 @@ export default function Visit() {
                 <div className="flex flex-col justify-center items-start ml-5">
                     <div className="flex flex-row justify-center items-center text-white">
                         <i className="fas fa-utensils text-[60px]"></i>
-                        <div className="font-Poppins text-4xl ml-3 font-extralight">Have You Ever</div>
+                        <div className="font-Poppins text-4xl ml-3 font-extralight overflow-visible">Have You Ever</div>
                     </div>
-                    <div className="font-Poppins text-5xl font-light mt-3 text-white">Ordered From</div>
-                    <div className="font-Null text-7xl font-light mt-7 text-yellow">MaggiHub</div>    
+                    <div className="font-Poppins text-5xl font-light mt-3 text-white overflow-visible">Ordered From</div>
+                    <div className="font-Null text-7xl font-light mt-7 text-yellow overflow-visible">MaggiHub</div>
                     <div className="flex flex-row justify-center items-center text-white mt-7">
                         <i className="fas fa-clock text-lg"></i>
                         <div className="font-Poppins text-lg ml-3 font-extralight">30 min delivery</div>
@@ -24,12 +28,16 @@ export default function Visit() {
                     <div className="flex flex-row justify-center items-center text-white mt-2">
                         <i className="fas fa-money-bill text-lg"></i>
                         <div className="font-Poppins text-lg ml-3 font-extralight">Cash on Delivery</div>
-                    </div> 
+                    </div>
                     <div className="flex flex-row justify-center items-center text-white mt-2 mb-7">
                         <i className="fas fa-map-marker text-lg"></i>
                         <div className="font-Poppins text-lg ml-3 font-extralight">Anywhere, Anytime</div>
-                    </div>        
-                    <Button text="Order Now"/>        
+                    </div>
+                    <Link to="/Contact" style={{ textDecoration: 'none' }} onClick={() => {
+                        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                    }}>
+                        <Button text="Order Now" />
+                    </Link>
                 </div>
                 <img src={pizza} className="hidden lg:block " alt="" />
             </div>
